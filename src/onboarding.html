@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Onboarding</title>
+    <link href="main.css" rel="stylesheet">
+    <link href="onboarding.css" rel="stylesheet">
+</head>
+<body>
+<div class="test-wrapper">
+    <div class="test-area">
+        <div class="onboarding__skip">
+            <button class="test-area__button">Пропустить</button>
+        </div>
+        <div class="onboarding__slides">
+            <div class="onboarding__slide onboarding__slide_current">
+                <h1 class="test-area__header">Варианты выбора ответа</h1>
+                <img class="onboarding__slide-image" src="images/onboarding-single-choice.svg"
+                     alt="Вопрос с одним вариантом ответа"/>
+                <p class="test-area__text">Для вопросов предусматривающих выбор только один вариант</p>
+            </div>
+            <div class="onboarding__slide">
+                <h1 class="test-area__header">Варианты выбора ответа</h1>
+                <img class="onboarding__slide-image" src="images/onboarding-multiple-choice.svg"
+                     alt="Вопрос с множественным выбором"/>
+                <p class="test-area__text">Для вопросов предусматривающих множественный выбор</p>
+            </div>
+            <div class="onboarding__slide">
+                <h1 class="test-area__header">Варианты выбора ответа</h1>
+                <img class="onboarding__slide-image" src="images/onboarding-dnd.svg"
+                     alt="Вопрос с перетаскиванием элементов"/>
+                <p class="test-area__text">Для вопросов предусматривающих перенос элементов </p>
+            </div>
+            <div class="onboarding__slide">
+                <h1 class="test-area__header">Варианты выбора ответа</h1>
+                <img class="onboarding__slide-image" src="images/onboarding-slider.svg"
+                     alt="Вопрос с оценкой степени согласия с утверждения"/>
+                <p class="test-area__text">Для вопросов предусматривающих выбор утверждения</p>
+            </div>
+        </div>
+        <div class="onboarding__step-choice">
+            <input type="radio" class="step-choice__option" name="step" value="step-1" checked autofocus>
+            <input type="radio" class="step-choice__option" name="step" value="step-2">
+            <input type="radio" class="step-choice__option" name="step" value="step-3">
+            <input type="radio" class="step-choice__option" name="step" value="step-4">
+        </div>
+    </div>
+</div>
+<script>
+  (() => {
+    const SELECTED_SLIDE_CLASS = 'onboarding__slide_current';
+    const carouselSlides = document.querySelectorAll('.onboarding__slide');
+    const stepOptions = document.querySelectorAll('.step-choice__option');
+
+    const selectSlide = selectedIndex => () => {
+      carouselSlides.forEach((slide, i) => {
+        if (i === selectedIndex) {
+          carouselSlides[i].classList.add(SELECTED_SLIDE_CLASS);
+        } else {
+          carouselSlides[i].classList.remove(SELECTED_SLIDE_CLASS);
+        }
+
+        stepOptions[selectedIndex].checked = true;
+      });
+    };
+
+    carouselSlides.forEach((slide, i) => {
+      slide.addEventListener('click', selectSlide((i + 1) % carouselSlides.length));
+    });
+    stepOptions.forEach((option, i) => {
+      option.addEventListener('click', selectSlide(i));
+    });
+  })();
+</script>
+</body>
+</html>

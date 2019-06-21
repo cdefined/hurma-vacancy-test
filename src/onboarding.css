@@ -1,0 +1,59 @@
+.onboarding__skip {
+    align-self: flex-end;
+    margin: 20px 20px 0 0;
+}
+
+.onboarding__step-choice {
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.step-choice__option {
+    appearance: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 13px;
+    margin: 0 4px;
+    background: var(--controlColor);
+    outline: none;
+}
+
+.step-choice__option:checked {
+    background: var(--baseColor);
+}
+
+.step-choice__option:focus,
+.step-choice__option:hover {
+    box-shadow: 0 1px 3px 0 rgba(240, 39, 18, 0.5);
+}
+
+.onboarding__slides {
+    position: relative;
+    flex-grow: 2;
+}
+
+.onboarding__slide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+}
+
+.onboarding__slide-image {
+    width: 600px;
+    height: 345px;
+    margin: 40px 0;
+}
+
+.onboarding__slide_current {
+    visibility: visible;
+    opacity: 1;
+}

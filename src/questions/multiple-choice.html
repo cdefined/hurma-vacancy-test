@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple choice question</title>
+    <link href="../main.css" rel="stylesheet">
+    <link href="questions.css" rel="stylesheet">
+</head>
+<body>
+<div class="test-wrapper">
+    <div class="test-area">
+        <h1 class="test-question__header">
+            У кнопок доступен аттрибут disabled (кнопка неактивна) и класс .test-area__button_hidden (кнопка скрыта)
+        </h1>
+        <div class="test-question__hint">Доступен множественный выбор</div>
+        <div class="test-question test-question__choice-question">
+            <div class="choice-question__column">
+                <div class="choice-question__option">
+                    <input type="checkbox" id="choice-1" name="question-1" value="choice-1" checked>
+                    <label for="choice-1">Полностью НЕ согласен</label>
+                </div>
+                <div class="choice-question__option">
+                    <input type="checkbox" id="choice-2" name="question-1" value="choice-2">
+                    <label for="choice-2">В основном НЕ согласен и могу это аргументировать кучей текста вот ещё текст
+                        здрасьте</label>
+                </div>
+                <div class="choice-question__option">
+                    <input type="checkbox" id="choice-3" name="question-1" value="choice-3">
+                    <label for="choice-3">Отчасти НЕ согласен</label>
+                </div>
+            </div>
+            <div class="choice-question__column">
+                <div class="choice-question__option">
+                    <input type="checkbox" id="choice-4" name="question-1" value="choice-4">
+                    <label for="choice-4">Отчасти согласен</label>
+                </div>
+                <div class="choice-question__option">
+                    <input type="checkbox" id="choice-5" name="question-1" value="choice-5">
+                    <label for="choice-5">В основном согласен</label>
+                </div>
+                <div class="choice-question__option">
+                    <input type="checkbox" id="choice-6" name="question-1" value="choice-6">
+                    <label for="choice-6">Отчасти согласен</label>
+                </div>
+            </div>
+        </div>
+        <div class="test-question__navigation">
+            <button class="test-area__button test-question__previous">Предыдущий</button>
+            <div class="test-question__progress-bar">
+                <div class="progress-bar__progress" style="width: 100%" data-progress="100"></div>
+            </div>
+            <button class="test-area__button test-question__next" disabled>Следующий</button>
+        </div>
+        <div class="test-question__link-wrapper">
+            <a href="../question-list.html" class="test-question__link">Список вопросов</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

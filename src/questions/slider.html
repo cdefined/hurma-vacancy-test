@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider question</title>
+    <link href="../main.css" rel="stylesheet">
+    <link href="questions.css" rel="stylesheet">
+</head>
+<body>
+<div class="test-wrapper">
+    <div class="test-area">
+        <h1 class="test-question__header">
+            Отметьте, какое из утверждений вам ближе?
+        </h1>
+        <div class="test-question__hint">Нужно выбрать ячейку</div>
+        <div class="test-question test-question__slider-question">
+            <div class="slider-question__slider-block">
+                <div class="slider-block__slider">
+                    <input type="radio" class="slider__section" name="question-1" value="choice-1">
+                    <input type="radio" class="slider__section" name="question-1" value="choice-2">
+                    <input type="radio" class="slider__section" name="question-1" value="choice-3" checked>
+                    <input type="radio" class="slider__section" name="question-1" value="choice-4">
+                    <input type="radio" class="slider__section" name="question-1" value="choice-5">
+                    <div class="slider-example"></div>
+                </div>
+                <div class="slider-block__captions">
+                    <div class="slider-block__caption">.slider__section_checked</div>
+                    <div class="slider-block__caption">.slider-example</div>
+                </div>
+            </div>
+            <div class="slider-question__slider-block">
+                <div class="slider-block__slider">
+                    <input type="radio" class="slider__section" name="question-2" value="choice-1">
+                    <input type="radio" class="slider__section" name="question-2" value="choice-2">
+                    <input type="radio" class="slider__section" name="question-2" value="choice-3" checked>
+                    <input type="radio" class="slider__section" name="question-2" value="choice-4">
+                    <input type="radio" class="slider__section" name="question-2" value="choice-5">
+                </div>
+                <div class="slider-block__captions">
+                    <div class="slider-block__caption">Чаще проявляю отзывчивость и доброжелательность</div>
+                    <div class="slider-block__caption">Могу быть холодным и неотзывчивым в отношениях</div>
+                </div>
+            </div>
+            <div class="slider-question__slider-block">
+                <div class="slider-block__slider">
+                    <input type="radio" class="slider__section" name="question-3" value="choice-1">
+                    <input type="radio" class="slider__section" name="question-3" value="choice-2">
+                    <input type="radio" class="slider__section" name="question-3" value="choice-3" checked>
+                    <input type="radio" class="slider__section" name="question-3" value="choice-4">
+                    <input type="radio" class="slider__section" name="question-3" value="choice-5">
+                </div>
+                <div class="slider-block__captions">
+                    <div class="slider-block__caption">Кружок здесь лишний</div>
+                    <div class="slider-block__caption">Кружок задаёт стиль всему контролу</div>
+                </div>
+            </div>
+            <div class="slider-question__slider-block">
+                <div class="slider-block__slider">
+                    <input type="radio" class="slider__section" name="question-4" value="choice-1">
+                    <input type="radio" class="slider__section" name="question-4" value="choice-2">
+                    <input type="radio" class="slider__section" name="question-4" value="choice-3" checked>
+                    <input type="radio" class="slider__section" name="question-4" value="choice-4">
+                    <input type="radio" class="slider__section" name="question-4" value="choice-5">
+                </div>
+                <div class="slider-block__captions">
+                    <div class="slider-block__caption">Кружок успеют сделать таскающимся</div>
+                    <div class="slider-block__caption">Кружок будет перемещаться только по клику</div>
+                </div>
+            </div>
+            <div class="slider-question__slider-block">
+                <div class="slider-block__slider">
+                    <input type="radio" class="slider__section" name="question-5" value="choice-1">
+                    <input type="radio" class="slider__section" name="question-5" value="choice-2">
+                    <input type="radio" class="slider__section" name="question-5" value="choice-3" checked>
+                    <input type="radio" class="slider__section" name="question-5" value="choice-4">
+                    <input type="radio" class="slider__section" name="question-5" value="choice-5">
+                </div>
+                <div class="slider-block__captions">
+                    <div class="slider-block__caption">Чаще проявляю отзывчивость и доброжелательность</div>
+                    <div class="slider-block__caption">Могу быть холодным и неотзывчивым в отношениях</div>
+                </div>
+            </div>
+        </div>
+        <div class="test-question__navigation">
+            <button class="test-area__button test-question__previous">Предыдущий</button>
+            <div class="test-question__progress-bar">
+                <div class="progress-bar__progress" style="width: 100%" data-progress="100"></div>
+            </div>
+            <button class="test-area__button test-question__next" disabled>Следующий</button>
+        </div>
+        <div class="test-question__link-wrapper">
+            <a href="../question-list.html" class="test-question__link">Список вопросов</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

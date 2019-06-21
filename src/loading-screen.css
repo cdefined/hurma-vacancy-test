@@ -1,0 +1,55 @@
+.loader__link-wrapper {
+    text-align: center;
+}
+
+.test-area__loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+.loader__text {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.29;
+    text-align: center;
+    color: #878b92;
+}
+
+.loader__path {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: dash 2.5s linear infinite;
+}
+
+.loader__small-path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: bash 2.5s linear infinite;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 200;
+    }
+    72% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes bash {
+    0% {
+        stroke-dashoffset: 101;
+    }
+    40% {
+        stroke-dashoffset: 101;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

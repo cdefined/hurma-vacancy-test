@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Single choice question</title>
+    <link href="../main.css" rel="stylesheet">
+    <link href="questions.css" rel="stylesheet">
+</head>
+<body>
+<div class="test-wrapper">
+    <div class="test-area">
+        <h1 class="test-question__header">
+            Чтобы менять значение прогресс-бара, у элемента .progress-bar__progress установить стилями ширину и
+            поменять значение атрибута data-progress. Например, если значение 85%: style="width: 85%" data-progress="85"
+        </h1>
+        <div class="test-question test-question__choice-question">
+            <div class="choice-question__column">
+                <div class="choice-question__option">
+                    <input type="radio" id="choice-1" name="question-1" value="choice-1" checked>
+                    <label for="choice-1">Полностью НЕ согласен</label>
+                </div>
+                <div class="choice-question__option">
+                    <input type="radio" id="choice-2" name="question-1" value="choice-2">
+                    <label for="choice-2">В основном НЕ согласен</label>
+                </div>
+                <div class="choice-question__option">
+                    <input type="radio" id="choice-3" name="question-1" value="choice-3">
+                    <label for="choice-3">Отчасти НЕ согласен</label>
+                </div>
+            </div>
+            <div class="choice-question__column">
+                <div class="choice-question__option">
+                    <input type="radio" id="choice-4" name="question-1" value="choice-4">
+                    <label for="choice-4">Отчасти согласен</label>
+                </div>
+                <div class="choice-question__option">
+                    <input type="radio" id="choice-5" name="question-1" value="choice-5">
+                    <label for="choice-5">Есть некторые замечания и я хотел бы их озвучить вот прямо сейчас</label>
+                </div>
+                <div class="choice-question__option">
+                    <input type="radio" id="choice-6" name="question-1" value="choice-6">
+                    <label for="choice-6">Отчасти согласен</label>
+                </div>
+            </div>
+        </div>
+        <div class="test-question__navigation">
+            <button class="test-area__button test-question__previous">Предыдущий</button>
+            <div class="test-question__progress-bar">
+                <div class="progress-bar__progress" style="width: 85%" data-progress="85"></div>
+            </div>
+            <button class="test-area__button test-question__next">Следующий</button>
+        </div>
+        <div class="test-question__link-wrapper">
+            <a href="../question-list.html" class="test-question__link">Список вопросов</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

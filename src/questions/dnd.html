@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Drag'n'drop question</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="../main.css" rel="stylesheet">
+    <link href="questions.css" rel="stylesheet">
+</head>
+<body>
+<div class="test-wrapper">
+    <div class="test-area">
+        <h1 class="test-question__header">
+            Для пущего эффекта тут прикручен джиквери, так что варинаты можно потаскать. Но не забудьте выпилить!
+        </h1>
+        <div class="test-question__hint">Нужно сопоставить варианты</div>
+        <div class="test-question test-question__dnd">
+            <div class="dnd__column">
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    .dnd__draggable_active для вариантов, которые схватили
+                </div>
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    Пустое место - .dnd__empty
+                </div>
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    Кстати тут максимум 2 строки текста, живите с этим
+                </div>
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    Если совсем туго, уменьшай оступы в .test-question__dnd
+                </div>
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    В основном НЕ согласен
+                </div>
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    Немецкая противотанковая пушка
+                </div>
+                <div class="dnd__sub-layer">
+                    <div class="dnd__empty"></div>
+                    <div class="dnd__empty"></div>
+                    <div class="dnd__empty"></div>
+                    <div class="dnd__empty"></div>
+                    <div class="dnd__empty"></div>
+                    <div class="dnd__empty"></div>
+                </div>
+            </div>
+            <div class="dnd__separator"></div>
+            <div class="dnd__column">
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    Кататься на велосипеде
+                </div>
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    —
+                </div>
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    Кататься на велосипеде
+                </div>
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    Кататься на велосипеде
+                </div>
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    Кататься на велосипеде
+                </div>
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    Кататься на велосипеде
+                </div>
+                <div class="dnd__draggable">
+                    <div class="dnd__bullet"></div>
+                    Кататься на велосипеде - лучше, чем не кататься, не так ли?
+                </div>
+                <div class="dnd__sub-layer">
+                    <div class="dnd__empty"></div>
+                    <div class="dnd__empty"></div>
+                    <div class="dnd__empty"></div>
+                    <div class="dnd__empty"></div>
+                    <div class="dnd__empty"></div>
+                    <div class="dnd__empty"></div>
+                    <div class="dnd__empty"></div>
+                </div>
+            </div>
+        </div>
+        <div class="test-question__navigation">
+            <button class="test-area__button test-question__previous">Предыдущий</button>
+            <div class="test-question__progress-bar">
+                <div class="progress-bar__progress" style="width: 15%" data-progress="15"></div>
+            </div>
+            <button class="test-area__button test-question__next" disabled>Следующий</button>
+        </div>
+        <div class="test-question__link-wrapper">
+            <a href="../question-list.html" class="test-question__link">Список вопросов</a>
+        </div>
+    </div>
+</div>
+<script>
+  $('.dnd__draggable').draggable({
+    classes: {
+      'ui-draggable-dragging': 'dnd__draggable-active'
+    }
+  });
+</script>
+</body>
+</html>
